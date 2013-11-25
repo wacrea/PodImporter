@@ -64,10 +64,6 @@
 			    	$enclosure = $xpath->query( 'enclosure', $item)->item(0);
 			    	$url_file = $enclosure->attributes->getNamedItem('url')->value;
 			    }
-			    elseif ($podcast['slug'] == 'audio-dramax') {
-
-			    	$pubdate = '';
-			    }
 			    elseif ($podcast['slug'] == 'mo5') {
 
 			    	$summary = $xpath->query( 'itunes:subtitle', $item)->item(0)->nodeValue;

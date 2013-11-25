@@ -15,7 +15,7 @@ function get_feeds(){
 		$feeds[2]['feed'] = 'http://feeds.feedburner.com/Geeksansmoderation';
 
 		$feeds[3]['slug'] = 'audio-dramax';
-		$feeds[3]['feed'] = 'http://www.audiodramax.com/feed';
+		$feeds[3]['feed'] = 'http://www.audiodramax.com/?feed=podcast';
 
 		// Pas de flux.
 		////$feeds[4]['slug'] = 'freepodcast';
