@@ -43,7 +43,7 @@ function get_feeds(){
 		$feeds[13]['feed'] = 'http://podcast.proxi-jeux.fr/feed/';
 
 		$feeds[14]['slug'] = 'senikast';
-		$feeds[14]['feed'] = 'http://www.senikstudio.com/senikast/rss.xml';
+		$feeds[14]['feed'] = 'http://www.senikast.com/senikast/rss.xml';
 
 		$feeds[15]['slug'] = 'tablette-cafe';
 		$feeds[15]['feed'] = 'http://feeds.feedburner.com/tablettecafe';

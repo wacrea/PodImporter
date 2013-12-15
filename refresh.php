@@ -13,6 +13,8 @@
 		$iPodcast = 1;
 
 		foreach($podcasts AS $podcast){
+		
+			echo $podcast['slug'].' \ ';
 					
 			$doc = new DOMDocument();
 			$doc->preserveWhiteSpace = false;
@@ -30,7 +32,7 @@
 
 			foreach( $items as $item ) {
 			    
-			    $title = $xpath->query( 'title', $item)->item(0)->nodeValue;
+			    $title = $xpath->query( 'title', $item)->item(0)->nodeValue;			    
 			    $pubdate = $xpath->query( 'pubDate', $item)->item(0)->nodeValue;
 			    $summary = $xpath->query( 'itunes:summary', $item)->item(0)->nodeValue;
 			    $keywords = $xpath->query( 'itunes:keywords', $item)->item(0)->nodeValue;
@@ -61,8 +63,11 @@
 			    	$keywords = '';
 			    	$duration = '';
 
-			    	$enclosure = $xpath->query( 'enclosure', $item)->item(0);
-			    	$url_file = $enclosure->attributes->getNamedItem('url')->value;
+			    	/*$enclosure2 = $xpath->query( 'enclosure', $item)->item(0);
+			    	$url_file = $enclosure2->attributes->getNamedItem('url')->value;*/
+			    	
+			    	$url_file = $xpath->query( 'feedburner:origEnclosureLink', $item)->item(0)->nodeValue;
+			    	echo $url_file;
 			    }
 			    elseif ($podcast['slug'] == 'mo5') {
 
